@@ -52,4 +52,5 @@ You can clone this repository and use the code in your Java projects. To get sta
 1. Clone the repository:
 
 ```bash
-[git clone https://github.com/your-username/data-structures-and-algorithms-java.git](https://github.com/tusharpatekar/java_dsa.git)https://github.com/tusharpatekar/java_dsa.git
+[(https://github.com/tusharpatekar/java_dsa.git)https://github.com/tusharpatekar/java_dsa.git
+](https://github.com/tusharpatekar/java_dsa.git)https://github.com/tusharpatekar/java_dsa.git)
