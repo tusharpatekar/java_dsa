@@ -87,6 +87,41 @@ public class LinkList {
         newNode.next = temp.next;
         temp.next = newNode;
     }
+
+    public int removeFirst(){
+        if(size == 0){
+            System.out.println("LinkedList is empty");
+            return Integer.MAX_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            return val;
+        }
+
+        int val = head.data;
+        head = head.next;
+        return val;
+    }
+
+    public int removeLast(){
+        if(size == 0){
+            System.out.println("LinkedList is empty");
+            return Integer.MAX_VALUE;
+        } else if (size == 1) {
+            int val = head.data;
+            head = tail = null;
+            return val;
+        }
+        Node prev = head;
+        for (int i=0; i<size-2; i++){
+            prev= prev.next;
+        }
+        int val = prev.next.data;
+        prev.next = null;
+        size -- ;
+        tail = prev;
+        return val;
+    }
     public static void main(String[] args){
         LinkList ll = new LinkList();
 
@@ -95,6 +130,10 @@ public class LinkList {
         ll.addLast(3);
         ll.addLast(4);
         ll.add(3,6);
+        ll.printList();
+
+      //  System.out.println(ll.removeFirst());
+        System.out.println(ll.removeLast());
         ll.printList();
     }
 }
