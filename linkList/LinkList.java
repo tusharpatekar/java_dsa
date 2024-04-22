@@ -122,6 +122,19 @@ public class LinkList {
         tail = prev;
         return val;
     }
+
+    public int itrSearch(int key){    //O(n)
+        Node temp = head;
+        int i = 0;
+        while(temp != null){
+            if(temp.data == key){
+                return i;
+            }
+            temp = temp.next;
+            i++;
+        }
+        return -1;
+    }
     public static void main(String[] args){
         LinkList ll = new LinkList();
 
@@ -129,11 +142,13 @@ public class LinkList {
         ll.addFirst(1);
         ll.addLast(3);
         ll.addLast(4);
-        ll.add(3,6);
+       // ll.add(3,6);
         ll.printList();
 
       //  System.out.println(ll.removeFirst());
-        System.out.println(ll.removeLast());
-        ll.printList();
+       // System.out.println(ll.removeLast());
+      //  ll.printList();
+        System.out.println("key found at " + ll.itrSearch(4));
+
     }
 }
