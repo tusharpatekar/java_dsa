@@ -151,6 +151,20 @@ public class LinkList {
     public int recSearch(int key){
         return helper(head, key);
     }
+
+    public void reverse(){
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+
+        }
+        head = prev;
+    }
     public static void main(String[] args){
         LinkList ll = new LinkList();
 
@@ -165,7 +179,8 @@ public class LinkList {
        // System.out.println(ll.removeLast());
       //  ll.printList();
        // System.out.println("key found at " + ll.itrSearch(4));
-        System.out.println("key found at " + ll.recSearch(4));
-
+       // System.out.println("key found at " + ll.recSearch(4));
+      ll.reverse();
+      ll.printList();
     }
 }
