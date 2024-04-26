@@ -165,6 +165,35 @@ public class LinkList {
         }
         head = prev;
     }
+
+
+    public void removeNthFormEnd(int n){
+        // calculate size of linked list
+        int sz = 0;
+        Node temp = head;
+        while(temp != null){
+            temp = temp.next;
+            sz ++;
+        }
+
+        //if head is to remove
+        if(n == sz){
+            head = head.next;
+            return;
+        }
+
+        // traverse to prev node
+        Node prev = head;
+        int i = 1;
+        while(i < sz-n){
+            prev = prev.next;
+            i++;
+        }
+        // delete the nth node
+        prev.next = prev.next.next;
+        size = size - 1;
+        return;
+    }
     public static void main(String[] args){
         LinkList ll = new LinkList();
 
@@ -180,7 +209,9 @@ public class LinkList {
       //  ll.printList();
        // System.out.println("key found at " + ll.itrSearch(4));
        // System.out.println("key found at " + ll.recSearch(4));
-      ll.reverse();
+     // ll.reverse();
+
+        ll.removeNthFormEnd(3);
       ll.printList();
     }
 }

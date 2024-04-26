@@ -1,0 +1,29 @@
+💎 Here are most important Linked List questions.
+💎 Cannot provide other platform links due to leetcode privacy policy.
+💎 "Hard work beats talent when talent doesn’t work hard."
+💎 Thank me later. 😊
+
+Reverse a linked list. https://leetcode.com/problems/reverse-linked-list/description/
+Design a linked list. https://leetcode.com/problems/design-linked-list/description/
+Find middle of linked list. https://leetcode.com/problems/middle-of-the-linked-list/description/
+Reverse linked list in k groups. https://leetcode.com/problems/reverse-nodes-in-k-group/description/
+Detect and delete loop. GFG
+Linked list cycle I. https://leetcode.com/problems/linked-list-cycle/description/
+Linked list cycle II. https://leetcode.com/problems/linked-list-cycle-ii/description/
+Remove linked list element. https://leetcode.com/problems/remove-linked-list-elements/description/
+Check LL is palindrome or not. https://leetcode.com/problems/palindrome-linked-list/description/
+Remove duplicates from sorted LL. https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/
+Remove duplicates from unsorted LL. GFG
+Sort Colors. https://leetcode.com/problems/sort-colors/description/
+Add Two Numbers https://leetcode.com/problems/add-two-numbers/description/
+Copy List with Random Pointer. https://leetcode.com/problems/copy-list-with-random-pointer/description/
+Intersection of Two Linked Lists. https://leetcode.com/problems/intersection-of-two-linked-lists/description/
+Kth node from the end. Coding Ninjas
+Remove Nth Node From End of List. https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+Merge Two Sorted Lists. https://leetcode.com/problems/merge-two-sorted-lists/description/
+Sort List. https://leetcode.com/problems/sort-list/description/
+Flatten a LL. GFG
+Rotate LL. https://leetcode.com/problems/rotate-list/description/
+Delete n nodes after m nodes of a linked list. GFG
+Find the Minimum and Maximum Number of Nodes Between Critical Points. https://leetcode.com/problems/find-the-minimum-and-maximum-number-of-nodes-between-critical-points/description/
+Merge Nodes in Between Zeros. https://leetcode.com/problems/merge-nodes-in-between-zeros/description/
