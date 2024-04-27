@@ -194,24 +194,78 @@ public class LinkList {
         size = size - 1;
         return;
     }
+
+    //function for finding middle node using fast - slow approach
+    public Node midNode(Node head){
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next != null) {
+            fast = fast.next.next; //+2
+            slow = slow.next;      //+1
+        }
+        return slow;
+    }
+
+    //function for finding palindrome
+
+    public boolean checkPalindrome(){
+        if(head == null || head.next == null){
+            return true;
+        }
+        //step - 1 find midNode
+
+        Node midNode = midNode(head);
+
+        //step - 2 reverse half list
+        Node prev = null;
+        Node curr = midNode;
+        Node next;
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr =  next;
+        }
+
+        Node right = prev;
+        Node left = head;
+        while(right != null){
+            if(left.data != right.data){
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+
+        }
+        return true;
+
+    }
     public static void main(String[] args){
         LinkList ll = new LinkList();
 
         ll.addFirst(2);
         ll.addFirst(1);
-        ll.addLast(3);
-        ll.addLast(4);
+        ll.addLast(2);
+        ll.addLast(1);
        // ll.add(3,6);
         ll.printList();
 
-      //  System.out.println(ll.removeFirst());
-       // System.out.println(ll.removeLast());
-      //  ll.printList();
-       // System.out.println("key found at " + ll.itrSearch(4));
-       // System.out.println("key found at " + ll.recSearch(4));
-     // ll.reverse();
+        //  System.out.println(ll.removeFirst());
+        // System.out.println(ll.removeLast());
+        //  ll.printList();
+        // System.out.println("key found at " + ll.itrSearch(4));
+        // System.out.println("key found at " + ll.recSearch(4));
+        // ll.reverse();
 
-        ll.removeNthFormEnd(3);
-      ll.printList();
+        //ll.removeNthFormEnd(3);
+        //ll.printList();
+
+        if(ll.checkPalindrome()){
+            System.out.println("Linked list is palindrome");
+        }else {
+            System.out.println("Linked list is not palindrome");
+        }
+
+
     }
 }
