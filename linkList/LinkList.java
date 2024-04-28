@@ -240,6 +240,9 @@ public class LinkList {
         return true;
 
     }
+
+    // break for today
+
     public static void main(String[] args){
         LinkList ll = new LinkList();
 
