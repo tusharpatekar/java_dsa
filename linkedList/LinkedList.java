@@ -1,8 +1,6 @@
-package linkList;
+package linkedList;
 
-public class LinkList {
-
-
+public class LinkedList {
 
     public static class Node{
         int data;
@@ -245,7 +243,7 @@ public class LinkList {
     // break again 29/04
 
     public static void main(String[] args){
-        LinkList ll = new LinkList();
+        LinkedList ll = new LinkedList();
 
         ll.addFirst(2);
         ll.addFirst(1);
