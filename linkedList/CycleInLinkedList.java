@@ -1,6 +1,6 @@
 package linkedList;
 
-public class DetectLoop {
+public class CycleInLinkedList {
 
     // Create LinkedList
     public static class Node{
@@ -58,19 +58,52 @@ public class DetectLoop {
         return false;
     }
 
+
+    // detection and remove cycle with pos
+    public int posAndRemove(Node head){
+        Node slow = head;
+        Node fast = head;
+        Node prev = null;
+        int pos = 0;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+            pos++;
+
+            if(fast == slow){
+
+                slow = head;
+                while(fast != slow){
+                    prev = fast;
+                    slow = slow.next;
+                    fast = fast.next;
+                    pos++;
+                }
+                if (prev != null) {
+                    prev.next = null; // Remove the cycle
+                } else {
+                    head = null; // No cycle found, set head to null
+                }
+                return pos;
+            }
+        }
+        return -1; // No cycle found
+    }
+
     public static void main(String[] args){
-        DetectLoop ll = new DetectLoop();
+        CycleInLinkedList ll = new CycleInLinkedList();
        head =  new Node(1);
        head.next = new Node(2);
        head.next.next = new Node(3);
-      // head.next.next.next = head;
-        ll.printList();
+       head.next.next.next = head;
+        //ll.printList();
 
-        if(ll.detectLoop(head)){
-            System.out.println("Loop detected ");
-        }else {
-            System.out.println("Loop Not found");
-        }
+//        if(ll.detectLoop(head)){
+//            System.out.println("Loop detected ");
+//        }else {
+//            System.out.println("Loop Not found");
+//        }
+        System.out.println("Loop Detected at pos " + "=" + ll.posAndRemove(head));
 
     }
 
