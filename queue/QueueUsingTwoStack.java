@@ -41,13 +41,15 @@ public class QueueUsingTwoStack {
         Queue q = new Queue();
 
         q.add(1);
-        q.add(2);
-        q.add(3);
-        q.add(4);
+        q.remove();
+        System.out.println(q.isEmpty());
 
+/*
         while (!q.isEmpty()){
             System.out.println(q.peek());
             q.remove();
         }
+
+ */
     }
 }
