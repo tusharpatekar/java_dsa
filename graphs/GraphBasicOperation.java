@@ -48,8 +48,17 @@ public class GraphBasicOperation {
     }
 
     public static void bfs(ArrayList<Edge>[] graph){
-        Queue<Integer> q = new LinkedList<>();
         boolean[] visited = new boolean[graph.length];
+        for (int i = 0; i < graph.length; i++) {
+            if(!visited[i]){
+                bfsUtil(graph, visited);
+            }
+
+        }
+    }
+    public static void bfsUtil(ArrayList<Edge>[] graph, boolean[] visited){
+        Queue<Integer> q = new LinkedList<>();
+
         q.add(0); // suppose 0 is starting point of graph
 
         while (!q.isEmpty()){
@@ -66,11 +75,36 @@ public class GraphBasicOperation {
         }
     }
 
+
+    public static void dfs(ArrayList<Edge>[] graph) {
+        boolean[] visited = new boolean[graph.length];
+        for (int i = 0; i < graph.length; i++) {
+            if(!visited[i]){
+                dfsUtil(graph, i, visited);
+            }
+        }
+    }
+
+    public static void dfsUtil(ArrayList<Edge>[] graph, int curr, boolean[] visited) {
+        // visited
+        System.out.print(curr + " ");
+        visited[curr] = true;
+
+        //for loop for neighbours
+        for (int i = 0; i < graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+            if(!visited[e.dist]){
+                dfsUtil(graph, e.dist, visited);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         ArrayList<Edge>[] graph = new   ArrayList[7]; // we create array of type ArrayList but it assign the NULL at every location which replicate as undefined place
 
         createGraph(graph);
-        bfs(graph);
+       // bfs(graph);
+        dfs(graph);
 //        for (int i = 0; i < graph[2].size(); i++) {
 //            Edge e = graph[2].get(i);
 //            System.out.print(e.dist + " ");
