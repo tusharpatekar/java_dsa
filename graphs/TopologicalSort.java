@@ -39,8 +39,8 @@ public class TopologicalSort {
 
         for (int i = 0; i < graph[curr].size(); i++) {
             GraphBasicOperation.Edge e = graph[curr].get(i);
-            if(!visited[e.dist]){
-                topLogicalSortUtil(graph, e.dist, visited, stack);
+            if(!visited[e.dest]){
+                topLogicalSortUtil(graph, e.dest, visited, stack);
             }
         }
         stack.push(curr);

@@ -34,10 +34,10 @@ public class DetectCycleInDirectedGraphs {
 
         for (int i = 0; i < graph[curr].size(); i++) {
             GraphBasicOperation.Edge e = graph[curr].get(i);
-            if(stack[e.dist]){  // if neighbour is in stack
+            if(stack[e.dest]){  // if neighbour is in stack
                 return true;
             }
-            if(!visited[e.dist] && isCycleUtil(graph, e.dist, visited, stack)){
+            if(!visited[e.dest] && isCycleUtil(graph, e.dest, visited, stack)){
                 return true;
             }
         }

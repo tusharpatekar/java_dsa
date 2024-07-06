@@ -8,12 +8,12 @@ public class GraphBasicOperation {
 
     public static class Edge{
         int src;
-        int dist;
+        int dest;
         int wt;
 
         public Edge(int s, int d, int w){
             this.src = s;
-            this.dist = d;
+            this.dest = d;
             this.wt = w;
         }
     }
@@ -69,7 +69,7 @@ public class GraphBasicOperation {
                 //now it neighbour should be added in queue
                 for (int i = 0; i < graph[curr].size(); i++) {
                     Edge e = graph[curr].get(i);
-                    q.add(e.dist);
+                    q.add(e.dest);
                 }
             }
         }
@@ -93,8 +93,8 @@ public class GraphBasicOperation {
         //for loop for neighbours
         for (int i = 0; i < graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
-            if(!visited[e.dist]){
-                dfsUtil(graph, e.dist, visited);
+            if(!visited[e.dest]){
+                dfsUtil(graph, e.dest, visited);
             }
         }
     }

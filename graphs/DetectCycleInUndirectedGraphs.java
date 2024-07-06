@@ -21,12 +21,12 @@ public class DetectCycleInUndirectedGraphs {
             GraphBasicOperation.Edge e = graph[curr].get(i);
 
             //case 3 ->  if neighbour is not visited and detect Cycle return true for neighbour then curr also return true
-            if(!visited[e.dist]){
-                if (detectCycleUtil(graph, visited, e.dist, curr))
+            if(!visited[e.dest]){
+                if (detectCycleUtil(graph, visited, e.dest, curr))
                     return true;
             }
             // case 2 -> if neighbour is visited but neighbour is not parent paren in sense 1 - > 2 then 1 is parent of 2
-            else if (visited[e.dist] && e.dist != par) {
+            else if (visited[e.dest] && e.dest != par) {
                 return true;
             }
             //case 1 do nothing -> if visited and parent

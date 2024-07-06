@@ -11,7 +11,7 @@ public class HasPath {
 
         for (int i = 0; i < graph[src].size(); i++) {
             GraphBasicOperation.Edge e = graph[src].get(i);
-            if(!visited[e.dist] && hasPath(graph, e.dist, dist, visited)){
+            if(!visited[e.dest] && hasPath(graph, e.dest, dist, visited)){
                 return true;
             }
         }
