@@ -100,10 +100,10 @@ public class GraphBasicOperation {
     }
 
     public static void main(String[] args) {
-        ArrayList<Edge>[] graph = new   ArrayList[7]; // we create array of type ArrayList but it assign the NULL at every location which replicate as undefined place
+        ArrayList<Edge>[] graph = new   ArrayList[7]; // we create array of type ArrayList, but it assigns the NULL at every location which replicate as undefined place
 
         createGraph(graph);
-       // bfs(graph);
+        bfs(graph);
         dfs(graph);
 //        for (int i = 0; i < graph[2].size(); i++) {
 //            Edge e = graph[2].get(i);
