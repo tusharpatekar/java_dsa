@@ -1,4 +1,4 @@
-package dynamicProgramming;
+package dynamicProgramming.FibonacciExamples;
 
 public class FibbonachiTabulation {
 
